@@ -15,19 +15,14 @@
   max-height: 756px;
   background-color: #f2f2f2;
   color: #000000;
-  /* выше установили ограничения для секции */
-}
-.header__container {
-  margin-left: 64px;
-  height: 100%;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+  z-index: 1;
+  /* выше установили ограничения для секции */
 }
-.header__container_margin-left {
-  margin-left: 64px;
-}
+
 .logo {
   width: 183px;
   height: 32px;
@@ -35,8 +30,7 @@
 .logo_place_header {
   position: absolute;
   top: 30px;
-  left: 0;
-  z-index: 3;
+  left: 64px;
 }
 .header__title {
   width: 730px;
@@ -44,7 +38,7 @@
   font-size: 102px;
   line-height: 96px;
   font-weight: bold;
-  margin: 0;
+  margin: 0 0 0 64px;
 }
 
 .header__subtitle {
@@ -52,13 +46,10 @@
   font-size: 18px;
   line-height: 25px;
   margin: 0;
-}
-  
-.header__subtitle_text {
   position: absolute;
   bottom: 30px;
-  left: 0;
-  z-index: 3;
+  left: 64px;
+  z-index: 2;
 }
   
 .header__link {
@@ -68,26 +59,21 @@
 .header__main-illustration {
   width: 765px;
   height: 608px;
-  
-}
-.header__main-illustration_position {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  
 }
 
 .header__square-pic {
   height: 568px;
   width: 568px;
   background: #2f80ed;
-  
-}
-.header__square-pic_position {
   position: absolute;
   top: 64px;
   right: 0;
-  z-index: 1;
+  z-index: -1;
+  
 }
 
 
@@ -109,17 +95,12 @@
 .two-columns__brief {
   width: 175px;
   color: #2f80ed;
-  
-}
-
-.two-columns__brief_title {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   margin: 0;
-  
-
 }
+
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
@@ -132,7 +113,7 @@
   font-weight: normal;
   margin: 0; 
 }
-.two-columns__paragraph:nth-of-type(2) {
+.two-columns__paragraph:nth-child(2n) {
   margin: 30px 0;
 }
 .two-columns__span-accent {
@@ -191,9 +172,9 @@
 /* секция Фейман */
 .feynman {
   background-color: #f2f2f2;
-  height: 790px;
+  min-height: 790px;
   position: relative;
-  z-index: -2;
+  z-index: 1;
   padding-top: 100px;
   text-align: center;
 } 
@@ -238,20 +219,20 @@
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
-  z-index: -2;
+  z-index: 1;
 }
 
 
-.section-title__theme_dark {
+.section-title_theme_dark {
   color: white;
 }
 
 
-.section-subtitle__theme_dark{
+.section-subtitle_theme_dark{
   color: white;
 }
 
-.table__theme_dark{
+.table_theme_dark{
   color: white;
 } 
 .table__cell_theme_dark {
@@ -276,6 +257,8 @@
   background-size: contain;
   z-index: -1;
 }
+
+
 .footer {
   background-color: #1f1f1f;
   color: white;
@@ -286,7 +269,7 @@
   
   
 }
-.footer__column {
+.footer__columns {
   width: 90%;
   min-height: 250px;
   margin: 0 auto;
@@ -344,4 +327,7 @@
   width: 16px;
   height: 16px;
   margin-right: 10px;
+}
+.link_hover:hover {
+ color: rgb(85, 84, 84);
 }
