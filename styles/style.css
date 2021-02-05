@@ -328,6 +328,6 @@
   height: 16px;
   margin-right: 10px;
 }
-.link_hover:hover {
+.link:hover {
  color: rgb(85, 84, 84);
 }
