@@ -1,5 +1,3 @@
-.video__iframe {
-  border: 0;
-  width: 515px;
-  height: 316px;
+.video__iframe:nth-child(2n+1) {
+  margin-right: 20px;
 }
