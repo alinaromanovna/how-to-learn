@@ -28,7 +28,7 @@
 
 @import url(../blocks/video/video.css);
 @import url(../blocks/video/__iframes/video__iframes.css);
-@import url(../blocks/video/__iframes/_item/video__iframes_item.css);
+@import url(../blocks/video/__iframes/video__iframes-item.css);
 @import url(../blocks/video/__iframe/video__iframe.css);
 
 
